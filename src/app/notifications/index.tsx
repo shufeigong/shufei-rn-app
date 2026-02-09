@@ -11,7 +11,7 @@ export default function Notifications() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e1f5fe',
+    backgroundColor: '#ffecb3',
     alignItems: 'center',
     justifyContent: 'center',
   },
