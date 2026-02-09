@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Index() {
+export default function Settings() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是设置页</Text>
+      <Text style={styles.title}>This is settings page</Text>
     </View>
   );
 }
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#4f9df7',
+    color: '#61DAFB',
   },
 });

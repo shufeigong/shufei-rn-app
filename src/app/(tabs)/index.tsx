@@ -4,14 +4,9 @@ import { Link } from 'expo-router';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是首页</Text>
-
-      <Link style={styles.link} href="/courses/1?title=Node.js">
-        查看 Node.js 课程
-      </Link>
-
-      <Link style={styles.link} href="/teachers/1">
-        打开教师页（Modal）
+      <Text style={styles.link}>Shufei Gong's React Naive App</Text>
+      <Link style={styles.link} href="/authors/1">
+        Open author Modal
       </Link>
     </View>
   );
@@ -20,18 +15,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#e29447',
+    color: '#61DAFB',
   },
   link: {
     marginTop: 20,
     fontSize: 20,
-    color: '#1f99b0',
+    color: '#61DAFB',
   },
 });

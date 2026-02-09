@@ -8,7 +8,7 @@ export default function ModalCloseButton() {
   return (
     <View style={styles.headerButton}>
       <TouchableOpacity onPress={() => router.dismiss()}>
-        <MaterialCommunityIcons name="close" size={30} color="#1f99b0" />
+        <MaterialCommunityIcons name="close" size={30} color="#61DAFB" />
       </TouchableOpacity>
     </View>
   );

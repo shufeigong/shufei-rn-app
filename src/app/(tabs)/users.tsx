@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Users() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是用户页</Text>
+      <Text style={styles.title}>This is user page</Text>
     </View>
   );
 }
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#e29447',
+    color: '#61DAFB',
   },
 });

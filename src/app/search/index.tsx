@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
+import JobBoard from '@/components/jobBoard/JobBoard';
+import { StyleSheet, View } from 'react-native';
 
 export default function Search() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是搜索页</Text>
+      <JobBoard />
     </View>
   );
 }
@@ -18,6 +19,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#4f9df7',
+    color: '#61DAFB',
   },
 });

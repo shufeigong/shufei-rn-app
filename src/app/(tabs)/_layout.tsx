@@ -4,21 +4,29 @@ import { Platform } from 'react-native';
 import TabBarIcon from '@/components/shared/TabBarIcon';
 
 export default function TabLayout() {
-  // iOS use native liquid glass Tabs
+  /* iOS use native Tabs (Liquid Glass Tabs can be shown here on latest iOS 26, released in Jan, 2026)
+  but because we use native tabs, it can't present mock stack header like tranditional JavaScript Tabs,
+  we have to set header in parent _layout Stack, I'm confident to say it is the best solution right now.
+  https://docs.expo.dev/router/advanced/native-tabs/#use-stacks-inside-tabs
+  even official doc doesn't provide sample code for this issue! 
+  nesting a native <Stack /> layout inside the native tab is not good, 
+  which will cause stuck performance issue.
+  */
+
   if (Platform.OS === 'ios') {
     return (
-      <NativeTabs tintColor="#1f99b0" disableTransparentOnScrollEdge>
+      <NativeTabs tintColor="#61DAFB" disableTransparentOnScrollEdge>
         <NativeTabs.Trigger name="index">
           <Label>Home</Label>
           <Icon sf={{ default: 'house', selected: 'house.fill' }} />
         </NativeTabs.Trigger>
         <NativeTabs.Trigger name="videos">
           <Icon sf={{ default: 'video', selected: 'video.fill' }} />
-          <Label>视频课程</Label>
+          <Label>Video</Label>
         </NativeTabs.Trigger>
         <NativeTabs.Trigger name="users">
           <Icon sf={{ default: 'person', selected: 'person.fill' }} />
-          <Label>我的</Label>
+          <Label>User</Label>
         </NativeTabs.Trigger>
       </NativeTabs>
     );
@@ -29,7 +37,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#1f99b0',
+        tabBarActiveTintColor: '#61DAFB',
       }}
     >
       <Tabs.Screen
@@ -42,14 +50,14 @@ export default function TabLayout() {
       <Tabs.Screen
         name="videos"
         options={{
-          title: '视频课程',
+          title: 'Video',
           tabBarIcon: ({ color }) => <TabBarIcon name="camrecorder" color={color} />,
         }}
       />
       <Tabs.Screen
         name="users"
         options={{
-          title: '我的',
+          title: 'User',
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
       />

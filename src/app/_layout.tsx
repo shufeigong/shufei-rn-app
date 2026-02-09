@@ -6,21 +6,20 @@ import ModalCloseButton from '@/components/shared/ModalCloseButton';
 export default function Layout() {
   return (
     <Stack screenOptions={screenOptions()}>
-      {/* Tabs */}
+      {/* Tabs, need to config header here to support native tabs for iOS */}
       <Stack.Screen name="(tabs)" options={tabOptions()} />
 
       {/* Cards */}
-      <Stack.Screen name="articles/index" options={{ title: '通知' }} />
-      <Stack.Screen name="settings/index" options={{ title: '设置' }} />
-      <Stack.Screen name="courses/[id]" options={{ title: '课程详情' }} />
-      <Stack.Screen name="search/index" options={{ title: '搜索' }} />
+      <Stack.Screen name="notifications/index" options={{ title: 'Notifications' }} />
+      <Stack.Screen name="settings/index" options={{ title: 'Settings' }} />
+      <Stack.Screen name="search/index" options={{ title: 'Search Jobs' }} />
 
       {/* Modal */}
       <Stack.Screen
-        name="teachers/[id]"
+        name="authors/[id]"
         options={{
           presentation: 'modal',
-          title: '老师详情',
+          title: 'Author',
           headerLeft: () => <ModalCloseButton />,
           animation: 'slide_from_bottom',
         }}

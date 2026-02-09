@@ -12,11 +12,12 @@ type IconName = ComponentProps<typeof SimpleLineIcons>['name'];
 interface HeaderButtonProps {
   name: IconName; // Strictly typed to valid icons
   href: Href; // Uses Expo Router's Href type
+  color: string;
   style?: StyleProp<TextStyle>;
 }
 
 /**
- * 导航栏 Logo 组件
+ * Top Navigator Logo component
  */
 function LogoTitle() {
   return (
@@ -29,16 +30,16 @@ function LogoTitle() {
 }
 
 /**
- * 导航栏按钮组件
+ * Top Navigator button component
  * @param props
  */
 function HeaderButton(props: HeaderButtonProps) {
-  const { name, ...rest } = props;
+  const { name, color, ...rest } = props;
 
   return (
     <Link asChild {...rest}>
       <TouchableOpacity>
-        <SimpleLineIcons size={20} color="#1f99b0" name={name} />
+        <SimpleLineIcons size={20} color={color} name={name} />
       </TouchableOpacity>
     </Link>
   );
@@ -48,15 +49,18 @@ export default function tabOptions(): NativeStackNavigationOptions {
   return {
     headerTitleAlign: 'center', // center title for Android
     headerTitle: () => <LogoTitle />,
-    headerLeft: () => <HeaderButton name="bell" href="/articles" style={styles.headerButton} />,
+    headerLeft: () => (
+      <HeaderButton name="bell" href="/notifications" color="#61DAFB" style={styles.headerButton} />
+    ),
     headerRight: () => (
       <>
         <HeaderButton
           name="magnifier"
           href="/search"
+          color="#61DAFB"
           style={[styles.headerButton, styles.searchButton]}
         />
-        <HeaderButton name="options" href="/settings" style={styles.headerButton} />
+        <HeaderButton name="options" href="/settings" color="#61DAFB" style={styles.headerButton} />
       </>
     ),
   };

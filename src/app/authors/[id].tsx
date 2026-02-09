@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-export default function Teacher() {
+export default function Author() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是老师详情页!</Text>
+      <Text style={styles.title}>Author: Shufei Gong</Text>
     </View>
   );
 }
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#e29447',
+    color: '#61DAFB',
   },
 });

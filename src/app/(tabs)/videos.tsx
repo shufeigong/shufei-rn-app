@@ -4,11 +4,7 @@ import { Link } from 'expo-router';
 export default function Videos() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是视频课程页</Text>
-
-      <Link style={styles.link} href="/courses/2?title=React Native">
-        查看 React Native 课程
-      </Link>
+      <Text style={styles.title}>This is video page</Text>
     </View>
   );
 }
@@ -23,11 +19,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#e29447',
+    color: '#61DAFB',
   },
   link: {
     marginTop: 20,
     fontSize: 20,
-    color: '#1f99b0',
+    color: '#61DAFB',
   },
 });

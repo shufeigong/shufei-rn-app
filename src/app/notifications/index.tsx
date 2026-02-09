@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Articles() {
+export default function Notifications() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>这里是通知列表页</Text>
+      <Text style={styles.title}>Notifications page</Text>
     </View>
   );
 }
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#4f9df7',
+    color: '#61DAFB',
   },
 });
