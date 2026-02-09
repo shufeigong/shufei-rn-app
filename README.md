@@ -1,4 +1,6 @@
-# Shufei Gong's New Jobs Board (Created by React Native + TypeScript)
+# Shufei Gong's New Jobs Board
+
+Created by **React Native + TypeScript**
 
 A high-performance React Native application that displays job postings from the Hacker News API. This project is built with a focus on rendering optimization, TypeScript type safety, and clean architecture.
 
@@ -14,13 +16,7 @@ In your terminal
 
 See screen record on iOS for result:
 
-
-
 https://github.com/user-attachments/assets/979f68c7-50ff-42c5-b966-b8a257d88fcd
-
-
-
-
 
 ## Key Features
 
