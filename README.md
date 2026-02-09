@@ -12,7 +12,11 @@ In your terminal
 4. Run `npx expo start`.
 5. Open http://localhost:8081 in your browser or use your simulator to test.
 
-See screen record for result:
+See screen record on iOS for result:
+
+
+https://github.com/user-attachments/assets/49ccf80d-2086-460d-a5f4-1a3c82ef85e3
+
 
 ## Key Features
 
