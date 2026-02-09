@@ -15,7 +15,11 @@ In your terminal
 See screen record on iOS for result:
 
 
-https://github.com/user-attachments/assets/49ccf80d-2086-460d-a5f4-1a3c82ef85e3
+
+https://github.com/user-attachments/assets/979f68c7-50ff-42c5-b966-b8a257d88fcd
+
+
+
 
 
 ## Key Features
