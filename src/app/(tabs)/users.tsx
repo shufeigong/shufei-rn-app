@@ -11,7 +11,7 @@ export default function Users() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#e8f5e9',
     alignItems: 'center',
     justifyContent: 'center',
   },
