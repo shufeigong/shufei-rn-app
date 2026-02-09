@@ -2,7 +2,7 @@
 
 Created by **React Native + TypeScript**
 
-A high-performance React Native application that displays job postings from the Hacker News API. This project is built with a focus on rendering optimization, TypeScript type safety, and clean architecture.
+A high-performance React Native application that displays job postings from the Hacker News API. This project is built with a focus on using latest **Liquid Glass Tabs** (iOS 26 in Jan, 2026), **FlatList** rendering optimization, TypeScript type safety, and clean architecture.
 
 ## Development Setup
 
