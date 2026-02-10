@@ -37,12 +37,12 @@ export default function JobBoard() {
 
     try {
       // Parallel requests for better performance
-      const More = await Promise.all(
+      const moreJobs = await Promise.all(
         batchIds.map((id) =>
           get<JobDetail>(`https://hacker-news.firebaseio.com/v0/item/${id}.json`),
         ),
       );
-      setJobs((prev) => [...prev, ...More]);
+      setJobs((prev) => [...prev, ...moreJobs]);
     } catch (error) {
       console.error('Failed to fetch jobs:', error);
     } finally {
