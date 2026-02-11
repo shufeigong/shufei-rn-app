@@ -36,7 +36,8 @@ const useFetchData = <T>(url: string, params: Record<string, any> = {}): FetchRe
     } finally {
       setLoading(false);
     }
-  }, [url, params]); // Note: 'params' is still an object here
+  }, [url, JSON.stringify(params)]);
+  // Note: 'params' is still an object here, serialize it to avoid reference diffierent
 
   useEffect(() => {
     const currentParamsString = JSON.stringify(params);
@@ -47,7 +48,7 @@ const useFetchData = <T>(url: string, params: Record<string, any> = {}): FetchRe
       // Update the ref to the current state for the next render
       prevParamsRef.current = currentParamsString;
     }
-  }, [url, fetchData, params]);
+  }, [url, fetchData, JSON.stringify(params)]);
 
   const onReload = async () => {
     await fetchData();
